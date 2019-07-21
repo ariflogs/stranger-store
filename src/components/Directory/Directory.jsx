@@ -17,7 +17,7 @@ class Directory extends Component {
         imgUrl: phone
       },
       {
-        title: "Desktop",
+        title: "Desktops",
         id: 2,
         imgUrl: desktop
       },
