@@ -35,6 +35,51 @@ export const phonesData = {
         "ROM: 128 GB",
         "Battery: 4100 mAh"
       ]
-    }
+    },
+    {
+      id: 3,
+      name: "OnePlus 7 PRO",
+      price: 77000,
+      imgUrl: OnePlus7Pro,
+      description: [
+        "OS: OxygenOS",
+        "Chipset: Qualcomm SDM855 Snapdragon 855",
+        "Display: 6.41 inches",
+        "RAM: 6 GB",
+        "ROM: 128 GB",
+        "Camera: Dual (48 MP + 5 MP) rear & 16 MP selfie",
+        "Battery: 3700 mAh"
+      ]
+    },
+    {
+      id: 4,
+      name: "OnePlus 7 PRO",
+      price: 77000,
+      imgUrl: OnePlus7Pro,
+      description: [
+        "OS: OxygenOS",
+        "Chipset: Qualcomm SDM855 Snapdragon 855",
+        "Display: 6.41 inches",
+        "RAM: 6 GB",
+        "ROM: 128 GB",
+        "Camera: Dual (48 MP + 5 MP) rear & 16 MP selfie",
+        "Battery: 3700 mAh"
+      ]
+    },
+    {
+      id: 5,
+      name: "OnePlus 7 PRO",
+      price: 77000,
+      imgUrl: OnePlus7Pro,
+      description: [
+        "OS: OxygenOS",
+        "Chipset: Qualcomm SDM855 Snapdragon 855",
+        "Display: 6.41 inches",
+        "RAM: 6 GB",
+        "ROM: 128 GB",
+        "Camera: Dual (48 MP + 5 MP) rear & 16 MP selfie",
+        "Battery: 3700 mAh"
+      ]
+    },
   ]
 };

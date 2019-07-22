@@ -9,9 +9,13 @@ function App() {
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/phones" component={Phones} />
+              <Route exact path="/camra" component={Phones} />
+
       </Switch>
     </div>
   );
 }
 
 export default App;
+
+

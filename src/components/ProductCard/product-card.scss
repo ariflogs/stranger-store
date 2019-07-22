@@ -1,0 +1,35 @@
+.product-card {
+  width: 300px;
+  height: auto;
+  min-height: 400px;
+  margin: 1.5rem .75rem;
+  display: inline-block;
+  overflow: auto;
+
+  .card-image {
+    padding: 2rem;
+    transition: all .3s;
+    height: 240px;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .price {
+    font-size: 1rem;
+    font-weight: 800;
+  }
+
+  &:hover {
+    .card-image {
+      padding: 1rem;
+    }
+  }
+
+  li {
+    margin: 4px 0;
+  }
+}
+

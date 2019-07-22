@@ -1,12 +1,13 @@
 import React from "react";
+import MainBtn from '../Button/Button';
+import "./product-card.scss";
 
 const ProductCard = ({item}) => {
 
 const {name, price, imgUrl, description} = item
 
-console.log(item)
   return (
-      <div className="card" style={{width: "320px", height: "480px", display: "inline-block", margin: "10px"}}>
+      <div className="card product-card z-depth-1">
         <div className="card-image waves-effect waves-block waves-light">
           <img className="activator" src={imgUrl} alt={name}/>
         </div>
@@ -14,7 +15,11 @@ console.log(item)
           <span className="card-title activator grey-text text-darken-4">
             {name}<i className="material-icons right">more_vert</i>
           </span>
-          <p>{price}</p>
+          <p className="price">Price: {price}৳</p>
+
+          <div className="add" style={{margin: "1rem auto 0 auto", width: "125px"}}>
+            <MainBtn value="Add to card"/>
+          </div>
         </div>
         <div className="card-reveal">
           <span className="card-title grey-text text-darken-4">
