@@ -13,7 +13,7 @@ class Products extends Component {
     return (
       <div className="container">
         <h1>{title}</h1>
-        {items.map(({id, name, price }) => <ProductCard key={id} name={name} price={price}/>)}
+        {items.map(item => <ProductCard key={item.id} item={item} />)}
       </div>
     );
   }
