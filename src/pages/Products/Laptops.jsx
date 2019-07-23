@@ -1,15 +1,15 @@
 import React, { Component } from "react";
-import { phonesData } from "./productData";
+import { laptopsData } from "./productData";
 import ProductCard from "../../components/ProductCard/ProductCard";
 import "./product-style.scss";
 
-class Phones extends Component {
+class Laptops extends Component {
   state = {
-    phonesData
+    laptopsData
   };
 
   render() {
-    const { title, items } = this.state.phonesData;
+    const { title, items } = this.state.laptopsData;
     return (
       <div className="container-fluid">
         <h1>{title}</h1>
@@ -23,4 +23,4 @@ class Phones extends Component {
   }
 }
 
-export default Phones;
+export default Laptops;
