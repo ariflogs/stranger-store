@@ -1,0 +1,47 @@
+nav {
+  box-shadow: 1px 1px 20px #ede6f3;
+}
+.nav-wrapper {
+  .container-fluid {
+    display: flex;
+    align-items: center;
+    ul {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      li {
+        a {
+          color: #333;
+          font-size: 18px;
+          font-weight: 500;
+          &:hover {
+            background: none;
+          }
+
+
+        }
+
+        .bag {
+          height: 30px;
+          width: 30px;
+          fill: #333;
+        }
+  
+        &:hover {
+          a {
+            color: indigo;
+          }
+        }
+
+        &:not(:last-child) {
+            
+          a::after {
+            content: "/";
+            padding-left: 8px;
+          }
+        }
+      }
+    }
+  }
+
+}

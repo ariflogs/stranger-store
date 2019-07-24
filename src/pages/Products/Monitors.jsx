@@ -11,7 +11,7 @@ class Monitors extends Component {
   render() {
     const { title, items } = this.state.monitorsData;
     return (
-      <div className="container">
+      <div className="container-fluid">
         <h1>{title}</h1>
         <div className="product-items">
           {items.map(item => (
