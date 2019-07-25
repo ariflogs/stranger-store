@@ -7,6 +7,7 @@ import Monitors from "./pages/Products/Monitors";
 import Headphones from "./pages/Products/Headphones";
 import Laptops from "./pages/Products/Laptops";
 import Cameras from "./pages/Products/Cameras";
+import SignInSignUP from "./components/Auth/SignInSignUp";
 
 
 function App() {
@@ -20,6 +21,8 @@ function App() {
         <Route exact path="/headphones" component={Headphones} />
         <Route exact path="/laptops" component={Laptops} />
         <Route exact path="/cameras" component={Cameras} />
+
+        <Route exact path="/signin" component={SignInSignUP} /> 
       </Switch>
     </div>
   );

@@ -10,7 +10,7 @@ const NavManu = () => {
       <div className="nav-wrapper  valign-wrapper">
         <div className="container-fluid">
           <Link to="/" className="brand-logo">
-            <img src={Logo} alt="logo" style={{ height: "50px" }} />
+            <img src={Logo} alt="logo"/>
           </Link>
           <ul className="right">
             {}
@@ -27,7 +27,7 @@ const NavManu = () => {
               <a href="collapsible.html">Monitors</a>
             </li>
             <li>
-              <a href="collapsible.html">Cameras</a>
+              <Link to="/signin">SignIn</Link>
             </li>
             <li>
               <Link to="/shop">

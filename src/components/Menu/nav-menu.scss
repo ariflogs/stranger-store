@@ -5,6 +5,13 @@ nav {
   .container-fluid {
     display: flex;
     align-items: center;
+
+    .brand-logo {
+      margin: 0;
+      img {
+        height: 50px;
+      }
+    }
     ul {
       display: flex;
       align-items: center;
