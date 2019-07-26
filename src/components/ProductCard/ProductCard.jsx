@@ -1,5 +1,4 @@
 import React from "react";
-import MainBtn from '../Button/Button';
 import "./product-card.scss";
 
 const ProductCard = ({item}) => {
@@ -18,11 +17,11 @@ const {name, price, imgUrl, description} = item
           <p className="price">Price: {price}৳</p>
 
           <div className="add" style={{margin: "1rem auto 0 auto", width: "125px"}}>
-            <MainBtn value="Add to card"/>
+            <button className="main-btn">Add to card</button>
           </div>
         </div>
         <div className="card-reveal">
-          <span className="card-title grey-text text-darken-4">
+          <span className="card-title">
           {name}<i className="material-icons right">close</i>
           </span>
           <ul>

@@ -1,7 +1,7 @@
 import React from "react";
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
-import "./sign-in.scss";
+import "./auth.scss";
 
 const SignInSignUp = () => {
 
@@ -18,18 +18,14 @@ const SignInSignUp = () => {
       <div className="overlay-container">
         <div className="overlay">
           <div className="overlay-panel overlay-left">
-            <h1>Welcome Back!</h1>
-            <p>
-              To keep connected with us please login with your personal info
-            </p>
-            <button className="ghost" id="signIn" onClick={toggleClassHandler}>
+            <h1>Already Have An Account?</h1>
+            <button className="ghost toggler" id="signIn" onClick={toggleClassHandler}>
               Sign In
             </button>
           </div>
           <div className="overlay-panel overlay-right">
-            <h1>Hello, Friend!</h1>
-            <p>Enter your personal details and start journey with us</p>
-            <button className="ghost" id="signUp" onClick={toggleClassHandler}>
+            <h1>Don't Have An Account?</h1>
+            <button className="ghost toggler" id="signUp" onClick={toggleClassHandler}>
               Sign Up
             </button>
           </div>

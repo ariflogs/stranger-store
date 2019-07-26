@@ -2,6 +2,13 @@
   font-family: 'Nunito', sans-serif;
 }
 
+$fb-col: #3b5998;
+$twitter-col: #00aced;
+$google-col: #dd4b39;
+
+$white: #fff;
+$dark-grey: #333;
+
 h1 {
   font-size: 50px;
 }
@@ -12,7 +19,59 @@ a {
   line-height: 1;
 }
 
+.main-btn {
+  border: 1px solid #333;
+  height: 30px;
+  width: 115px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  transition: all .3s;
+  color: #333;
+  margin: 1rem 0;
+  background-color: #fff;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #333;
+    color: #fff;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 .container-fluid {
-  width: 100vw;
+  width: 100%;
   padding: 0 50px; 
+}
+
+// colors
+.bg-google-col {
+  background-color: $google-col;
+}
+
+.bg-fb-col {
+  background-color: $fb-col;
+}
+
+.bg-twitter-col {
+  background-color: $twitter-col;
+}
+
+/* label focus color */
+.input-field input:focus + label {
+	color: indigo !important;
+}
+/* label underline focus color */
+.input-field input:focus {
+	border-bottom: 1px solid indigo !important;
+	box-shadow: 0 1px 0 0 indigo !important
 }
