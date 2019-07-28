@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { signInWithGoogle } from "../../firebase/firebase.uitls";
+import { signInWithGoogle, signInWithFB, signInWithGithub } from "../../firebase/firebase.uitls";
 import "./auth.scss";
 
 class SignIn extends Component {
@@ -31,15 +31,15 @@ class SignIn extends Component {
         <form action="#" onSubmit={this.onFormSubmit}>
           <h1>Sign in</h1>
           <div className="social-container">
-            <Link to="" className="social bg-google-col">
+            <span className="social bg-google-col" onClick={signInWithGoogle}>
               <i className="fab fa-google" />
-            </Link>
-            <Link to="/" className="social bg-fb-col">
+            </span>
+            <span className="social bg-fb-col" onClick={signInWithFB}>
               <i className="fab fa-facebook-f" />
-            </Link>
-            <Link to="/" className="social bg-twitter-col">
-              <i className="fab fa-twitter" />
-            </Link>
+            </span>
+            <span className="social bg-github-col" onClick={signInWithGithub}>
+              <i class="fab fa-github"></i>
+            </span>
           </div>
           <span>or use your account</span>
 
@@ -69,7 +69,7 @@ class SignIn extends Component {
           <Link to="/" style={{ margin: "1rem 0" }}>
             Forgot your password?
           </Link>
-          <button type="submit" className="main-btn" onClick={this.haha}>
+          <button type="submit" className="main-btn">
             Sign In
           </button>
         </form>

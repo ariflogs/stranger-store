@@ -5,6 +5,7 @@
 $fb-col: #3b5998;
 $twitter-col: #00aced;
 $google-col: #dd4b39;
+$github-col: #333;
 
 $white: #fff;
 $dark-grey: #333;
@@ -64,6 +65,10 @@ a {
 
 .bg-twitter-col {
   background-color: $twitter-col;
+}
+
+.bg-github-col {
+  background-color: $github-col;
 }
 
 /* label focus color */

@@ -25,10 +25,21 @@
 			width: 100%;
 		}
 	}
-	
-	.social {
-		i {
-			color: $white;
+	.social-container {
+		margin: 20px 0;
+
+		.social {
+			border-radius: 50%;
+			cursor: pointer;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0 5px;
+			height: 40px;
+			width: 40px;
+			i {
+				color: $white;
+			}
 		}
 	}
 }
@@ -171,16 +182,3 @@
 	transform: translateX(20%);
 }
 
-.social-container {
-	margin: 20px 0;
-}
-
-.social-container a {
-	border-radius: 50%;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	margin: 0 5px;
-	height: 40px;
-	width: 40px;
-}
