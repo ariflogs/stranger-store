@@ -17,7 +17,7 @@ nav {
       align-items: center;
       margin-left: auto;
       li {
-        a {
+        a, span {
           color: #333;
           font-size: 18px;
           font-weight: 500;
@@ -35,7 +35,7 @@ nav {
         }
   
         &:hover {
-          a {
+          a,span {
             color: indigo;
           }
         }

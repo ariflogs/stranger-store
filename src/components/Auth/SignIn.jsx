@@ -38,7 +38,7 @@ class SignIn extends Component {
               <i className="fab fa-facebook-f" />
             </span>
             <span className="social bg-github-col" onClick={signInWithGithub}>
-              <i class="fab fa-github"></i>
+              <i className="fab fa-github"></i>
             </span>
           </div>
           <span>or use your account</span>

@@ -1,5 +1,8 @@
-import React from "react";
+import React, {Component} from "react";
 import {Route, Switch } from "react-router-dom";
+
+import {auth} from './firebase/firebase.uitls';
+
 import NavManu from "./components/Menu/NavManu";
 import HomePage from "./pages/Homepage/Homepage";
 import Phones from "./pages/Products/Phones";
@@ -10,22 +13,49 @@ import Cameras from "./pages/Products/Cameras";
 import SignInSignUP from "./components/Auth/SignInSignUp";
 
 
-function App() {
-  return (
-    <div className="App">
-      <Route path="/" render={ ( props ) => ( props.location.pathname !== "/") && <NavManu /> } />
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route exact path="/phones" component={Phones} />
-        <Route exact path="/monitors" component={Monitors} />
-        <Route exact path="/headphones" component={Headphones} />
-        <Route exact path="/laptops" component={Laptops} />
-        <Route exact path="/cameras" component={Cameras} />
 
-        <Route exact path="/signin" component={SignInSignUP} /> 
-      </Switch>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props)
+    
+    this.state = {
+      currentUser: null
+    }
+  }
+
+
+  unSubcribeFromAuth = null
+
+  componentDidMount() {
+    this.unSubcribeFromAuth = auth.onAuthStateChanged(user => {
+      this.setState({currentUser: user})
+    })
+  }
+
+  componentWillUnmount() {
+    this.unSubcribeFromAuth()
+  }
+
+
+  render() {
+
+    console.log(this.state.currentUser)
+    return (
+      <div className="App">
+        <NavManu currentUser={this.state.currentUser} />
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/phones" component={Phones} />
+          <Route exact path="/monitors" component={Monitors} />
+          <Route exact path="/headphones" component={Headphones} />
+          <Route exact path="/laptops" component={Laptops} />
+          <Route exact path="/cameras" component={Cameras} />
+  
+          <Route exact path="/signin" component={SignInSignUP} /> 
+        </Switch>
+      </div>
+    );
+  }
 }
 
 export default App;
