@@ -9,7 +9,6 @@ import { ReactComponent as Shopbag } from "./shopping-bag.svg";
 
 const NavManu = ({currentUser}) => {
 
-  console.log(window.location.pathname)
   return (
     <nav className="white" style={{height: '80px'}}>
       <div className="nav-wrapper  valign-wrapper">
@@ -20,26 +19,26 @@ const NavManu = ({currentUser}) => {
           <ul className="right">
             {}
             <li>
-              <Link to="/phones">Phones</Link>
+              <Link className="nav-item" to="/phones">Phones</Link>
             </li>
             <li>
-              <Link to="/laptops">Laptops</Link>
+              <Link className="nav-item" to="/laptops">Laptops</Link>
             </li>
             <li>
-              <Link to="/headphones">Headphones</Link>
+              <Link className="nav-item" to="/headphones">Headphones</Link>
             </li>
             <li>
-              <Link to="/monitors">Monitors</Link>
+              <Link className="nav-item" to="/monitors">Monitors</Link>
             </li>
             <li>
-              <Link to="/cameras">Cameras</Link>
+              <Link className="nav-item" to="/cameras">Cameras</Link>
             </li>
             <li>
               {
                 currentUser ? 
-                <Link to={window.location.pathname} onClick={() => auth.signOut()}>Sign Out</Link>
+                <span className="nav-item" onClick={() => auth.signOut()}>Sign Out</span>
                 :
-                <Link to="/signin">Sign In</Link>
+                <Link className="nav-item" to="/signin">Sign In</Link>
               }
               {/* <Link to="/signin">SignIn</Link> */}
             </li>

@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {Route, Switch } from "react-router-dom";
 
-import {auth} from './firebase/firebase.uitls';
+import {auth, createUserProfileDoc} from './firebase/firebase.uitls';
 
 import NavManu from "./components/Menu/NavManu";
 import HomePage from "./pages/Homepage/Homepage";
@@ -29,6 +29,8 @@ class App extends Component {
   componentDidMount() {
     this.unSubcribeFromAuth = auth.onAuthStateChanged(user => {
       this.setState({currentUser: user})
+      
+      createUserProfileDoc(user)
     })
   }
 
@@ -38,8 +40,6 @@ class App extends Component {
 
 
   render() {
-
-    console.log(this.state.currentUser)
     return (
       <div className="App">
         <NavManu currentUser={this.state.currentUser} />
@@ -51,7 +51,7 @@ class App extends Component {
           <Route exact path="/laptops" component={Laptops} />
           <Route exact path="/cameras" component={Cameras} />
   
-          <Route exact path="/signin" component={SignInSignUP} /> 
+          <Route exact path="/signin" component={SignInSignUP} />
         </Switch>
       </div>
     );

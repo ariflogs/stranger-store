@@ -21,9 +21,6 @@ class SignIn extends Component {
     this.setState({ [name]: value });
   };
 
-  haha() {
-    signInWithGoogle()
-  }
 
   render() {
     return (

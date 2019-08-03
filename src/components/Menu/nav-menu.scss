@@ -17,10 +17,11 @@ nav {
       align-items: center;
       margin-left: auto;
       li {
-        a, span {
+        .nav-item {
           color: #333;
           font-size: 18px;
           font-weight: 500;
+          cursor: pointer;
           &:hover {
             background: none;
           }
@@ -35,14 +36,14 @@ nav {
         }
   
         &:hover {
-          a,span {
+          .nav-item {
             color: indigo;
           }
         }
 
         &:not(:last-child) {
             
-          a::after {
+          .nav-item::after {
             content: "/";
             padding-left: 8px;
           }

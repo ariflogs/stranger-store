@@ -1,6 +1,6 @@
-import firebase from 'firebase/app';
-import 'firebase/firestore';
-import 'firebase/auth';
+import firebase from "firebase/app";
+import "firebase/firestore";
+import "firebase/auth";
 
 const config = {
   apiKey: "AIzaSyAXGiuKViyrdh7db8033Q5ZRa0ez_ImAn0",
@@ -22,16 +22,40 @@ const fbProvider = new firebase.auth.FacebookAuthProvider();
 const githubProvider = new firebase.auth.GithubAuthProvider();
 
 googleProvider.setCustomParameters({
-  'prompt': 'select_account'
+  prompt: "select_account"
 });
 fbProvider.setCustomParameters({
-  'prompt': 'select_account'
+  prompt: "select_account"
 });
-
-
 
 export const signInWithGoogle = () => auth.signInWithPopup(googleProvider);
 export const signInWithFB = () => auth.signInWithPopup(fbProvider);
 export const signInWithGithub = () => auth.signInWithPopup(githubProvider);
+
+export const createUserProfileDoc = async (userAuth, aditonalData) => {
+  if (!userAuth) return;
+
+  const userRef = firestore.doc(`users/${userAuth.uid}`); // why not use await here??
+  const snapshot = await userRef.get();
+
+  if (!snapshot.exists) {
+    const { displayName, email } = userAuth;
+    const createdAt = new Date();
+    try {
+      await userRef.set({
+        displayName,
+        email,
+        createdAt,
+        ...aditonalData
+      });
+    } catch (error) {
+      console.log("couldn't add user!!", error.message);
+    }
+  }
+  console.log(userAuth)
+
+  return userAuth;
+
+};
 
 export default firebase;
