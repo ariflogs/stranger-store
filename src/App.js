@@ -1,7 +1,6 @@
-import React, {Component} from "react";
-import {Route, Switch } from "react-router-dom";
-
-import {auth, createUserProfileDoc} from './firebase/firebase.uitls';
+import React, { Component } from "react";
+import { Route, Switch } from "react-router-dom";
+import { auth, createUserProfileDoc } from "./firebase/firebase.uitls";
 
 import NavManu from "./components/Menu/NavManu";
 import HomePage from "./pages/Homepage/Homepage";
@@ -11,35 +10,40 @@ import Headphones from "./pages/Products/Headphones";
 import Laptops from "./pages/Products/Laptops";
 import Cameras from "./pages/Products/Cameras";
 import SignInSignUP from "./components/Auth/SignInSignUp";
-
-
-
 class App extends Component {
   constructor(props) {
-    super(props)
-    
+    super(props);
+
     this.state = {
       currentUser: null
-    }
+    };
   }
 
-
-  unSubcribeFromAuth = null
+  unSubcribeFromAuth = null;
 
   componentDidMount() {
-    this.unSubcribeFromAuth = auth.onAuthStateChanged(user => {
-      this.setState({currentUser: user})
-      
-      createUserProfileDoc(user)
-    })
+    this.unSubcribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+      if (userAuth) {
+        const userRef = await createUserProfileDoc(userAuth);
+
+        userRef.onSnapshot(snapshot => {
+          this.setState({
+            currentUser: {
+              id: snapshot.id,
+              ...snapshot.data()
+            }
+          })
+        });
+      }
+    });
   }
 
   componentWillUnmount() {
-    this.unSubcribeFromAuth()
+    this.unSubcribeFromAuth();
   }
 
-
   render() {
+    console.log(this.state)
     return (
       <div className="App">
         <NavManu currentUser={this.state.currentUser} />
@@ -50,7 +54,7 @@ class App extends Component {
           <Route exact path="/headphones" component={Headphones} />
           <Route exact path="/laptops" component={Laptops} />
           <Route exact path="/cameras" component={Cameras} />
-  
+
           <Route exact path="/signin" component={SignInSignUP} />
         </Switch>
       </div>
@@ -59,5 +63,3 @@ class App extends Component {
 }
 
 export default App;
-
-

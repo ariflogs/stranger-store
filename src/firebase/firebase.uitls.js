@@ -52,10 +52,8 @@ export const createUserProfileDoc = async (userAuth, aditonalData) => {
       console.log("couldn't add user!!", error.message);
     }
   }
-  console.log(userAuth)
 
-  return userAuth;
-
+  return userRef;
 };
 
 export default firebase;
