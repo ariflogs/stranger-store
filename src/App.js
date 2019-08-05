@@ -35,6 +35,8 @@ class App extends Component {
           })
         });
       }
+
+      this.setState({currentUser: userAuth})
     });
   }
 
@@ -43,7 +45,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state)
     return (
       <div className="App">
         <NavManu currentUser={this.state.currentUser} />
