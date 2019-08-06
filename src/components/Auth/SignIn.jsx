@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { signInWithGoogle, signInWithFB, signInWithGithub } from "../../firebase/firebase.uitls";
+import { auth, signInWithGoogle, signInWithFB, signInWithGithub } from "../../firebase/firebase.uitls";
 import "./auth.scss";
 
 class SignIn extends Component {
@@ -9,10 +9,22 @@ class SignIn extends Component {
     password: ""
   };
 
-  onFormSubmit = e => {
+  onFormSubmit = async e => {
     e.preventDefault();
 
-    this.setState({ email: "", password: "" });
+    const {email, password} = this.state
+
+
+    try {
+      await auth.signInWithEmailAndPassword(email, password)
+      this.setState({ email: "", password: "" });
+
+      alert("Singed In")
+    } catch(error) {
+      alert(error.message)
+    }
+
+
   };
 
   onInputCange = e => {

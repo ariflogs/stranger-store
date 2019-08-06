@@ -94,6 +94,10 @@
 	width: 50%;
 	opacity: 0;
 	z-index: 1;
+
+	.input-field {
+		margin-top: 0;
+	}
 }
 
 .auth-container.right-panel-active .sign-up-container {

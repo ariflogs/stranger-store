@@ -42,9 +42,6 @@ export const createUserProfileDoc = async (userAuth, aditonalData) => {
     const { displayName, email } = userAuth;
     const createdAt = new Date();
 
-    console.log(userAuth, aditonalData)
-
-
     try {
       await userRef.set({
         displayName,

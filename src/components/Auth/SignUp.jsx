@@ -41,7 +41,6 @@ class SignUp extends Component {
       console.log(error)
     }
 
-
   }
   
   onInputChange = e => {
