@@ -34,7 +34,7 @@ a {
   background-color: #fff;
   cursor: pointer;
 
-  &:hover {
+  &:hover, &:focus, &:active {
     background-color: #333;
     color: #fff;
   }

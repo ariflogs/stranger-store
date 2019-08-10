@@ -1,0 +1,13 @@
+.chart-icon {
+  position: relative;
+
+  .item-num {
+    position: absolute;
+    bottom: -15px;
+    left: 26px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #333;
+    border-radius: 50%;
+  }
+}
