@@ -6,7 +6,6 @@ import SurfacePro7 from "./productImgs/laptops/Surface-Pro-7.jpg";
 
 export const phonesData = {
   title: "Phones",
-  id: 1,
   items: [
     {
       id: 1,
@@ -90,10 +89,9 @@ export const phonesData = {
 
 export const monitorsData = {
   title: "Monitors",
-  id: 1,
   items: [
     {
-      id: 1,
+      id: 6,
       name: "OnePlus 7 PRO",
       price: 77000,
       imgUrl: OnePlus7Pro,
@@ -108,7 +106,7 @@ export const monitorsData = {
       ]
     },
     {
-      id: 2,
+      id: 7,
       name: "Samsung Galaxy S10 Plus",
       price: 92000,
       imgUrl: SumsungG10Plus,
@@ -124,7 +122,7 @@ export const monitorsData = {
       ]
     },
     {
-      id: 3,
+      id: 8,
       name: "OnePlus 7 PRO",
       price: 77000,
       imgUrl: OnePlus7Pro,
@@ -139,7 +137,7 @@ export const monitorsData = {
       ]
     },
     {
-      id: 4,
+      id: 9,
       name: "OnePlus 7 PRO",
       price: 77000,
       imgUrl: OnePlus7Pro,
@@ -154,7 +152,7 @@ export const monitorsData = {
       ]
     },
     {
-      id: 5,
+      id: 10,
       name: "OnePlus 7 PRO",
       price: 77000,
       imgUrl: OnePlus7Pro,
@@ -173,10 +171,9 @@ export const monitorsData = {
 
 export const headphonesData = {
   title: "Headphones",
-  id: 1,
   items: [
     {
-      id: 1,
+      id: 11,
       name: "OnePlus 7 PRO",
       price: 77000,
       imgUrl: OnePlus7Pro,
@@ -191,7 +188,7 @@ export const headphonesData = {
       ]
     },
     {
-      id: 2,
+      id: 12,
       name: "Samsung Galaxy S10 Plus",
       price: 92000,
       imgUrl: SumsungG10Plus,
@@ -207,7 +204,7 @@ export const headphonesData = {
       ]
     },
     {
-      id: 3,
+      id: 13,
       name: "OnePlus 7 PRO",
       price: 77000,
       imgUrl: OnePlus7Pro,
@@ -222,7 +219,7 @@ export const headphonesData = {
       ]
     },
     {
-      id: 4,
+      id: 14,
       name: "OnePlus 7 PRO",
       price: 77000,
       imgUrl: OnePlus7Pro,
@@ -237,7 +234,7 @@ export const headphonesData = {
       ]
     },
     {
-      id: 5,
+      id: 15,
       name: "OnePlus 7 PRO",
       price: 77000,
       imgUrl: OnePlus7Pro,
@@ -256,10 +253,9 @@ export const headphonesData = {
 
 export const laptopsData = {
   title: "Laptops",
-  id: 1,
   items: [
     {
-      id: 1,
+      id: 16,
       name: `Apple MacBook Pro with 15" Retina Display`,
       price: 215000,
       imgUrl: MacbookPro15,
@@ -275,7 +271,7 @@ export const laptopsData = {
       ]
     },
     {
-      id: 2,
+      id: 17,
       name: "Asus VivoBook 14 X412UA",
       price: 39800,
       imgUrl: AsusVivoBook,
@@ -291,7 +287,7 @@ export const laptopsData = {
       ]
     },
     {
-      id: 3,
+      id: 18,
       name: "Microsoft Surface Pro 6",
       price: 106500,
       imgUrl: SurfacePro7,
@@ -311,10 +307,9 @@ export const laptopsData = {
 
 export const camerasData = {
   title: "Cameras",
-  id: 1,
   items: [
     {
-      id: 1,
+      id: 19,
       name: "OnePlus 7 PRO",
       price: 77000,
       imgUrl: OnePlus7Pro,
@@ -329,7 +324,7 @@ export const camerasData = {
       ]
     },
     {
-      id: 2,
+      id: 20,
       name: "Samsung Galaxy S10 Plus",
       price: 92000,
       imgUrl: SumsungG10Plus,
@@ -345,7 +340,7 @@ export const camerasData = {
       ]
     },
     {
-      id: 3,
+      id: 21,
       name: "OnePlus 7 PRO",
       price: 77000,
       imgUrl: OnePlus7Pro,
@@ -360,7 +355,7 @@ export const camerasData = {
       ]
     },
     {
-      id: 4,
+      id: 22,
       name: "OnePlus 7 PRO",
       price: 77000,
       imgUrl: OnePlus7Pro,
@@ -375,7 +370,7 @@ export const camerasData = {
       ]
     },
     {
-      id: 5,
+      id: 23,
       name: "OnePlus 7 PRO",
       price: 77000,
       imgUrl: OnePlus7Pro,

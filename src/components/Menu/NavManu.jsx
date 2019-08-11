@@ -3,14 +3,15 @@ import { auth } from "../../firebase/firebase.uitls";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
-import ShopingCardIcon from "../ShopingCardIcon/ShopingCardIcon"
+import ShoppingChartIcon from "../ShoppingChartIcon/ShoppingChartIcon"
+import ShoppingChartDropdown from '../ShoppingChartDropdown/ShoppingChartDropdown'
 
 import "./nav-menu.scss";
 import Logo from "./logo.jpg";
 
 
 
-const NavManu = ({ currentUser }) => {
+const NavManu = ({ currentUser, show }) => {
 
   return (
     <nav className="white" style={{ height: "80px" }}>
@@ -58,17 +59,19 @@ const NavManu = ({ currentUser }) => {
               )}
             </li>
             <li>
-                <ShopingCardIcon cn="bag" />
+                <ShoppingChartIcon cn="bag" />
             </li>
           </ul>
         </div>
+        {show && <ShoppingChartDropdown />}
       </div>
     </nav>
   );
 };
 
-const mapStateToProps = state => ({
-  currentUser: state.user.currentUser
+const mapStateToProps = ({user, chart}) => ({
+  currentUser: user.currentUser,
+  show: chart.show
 });
 
 export default connect(mapStateToProps)(NavManu);

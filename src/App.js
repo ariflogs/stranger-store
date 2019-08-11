@@ -7,6 +7,8 @@ import { createUserAction } from "./redux/user/userAction";
 
 import NavManu from "./components/Menu/NavManu";
 import HomePage from "./pages/Homepage/Homepage";
+import Checkout from './pages/Checkout/Checkout'
+
 import Phones from "./pages/Products/Phones";
 import Monitors from "./pages/Products/Monitors";
 import Headphones from "./pages/Products/Headphones";
@@ -46,6 +48,8 @@ class App extends Component {
         <NavManu />
         <Switch>
           <Route exact path="/" component={HomePage} />
+          <Route exact path="/checkout" component={Checkout} />
+
           <Route exact path="/phones" component={Phones} />
           <Route exact path="/monitors" component={Monitors} />
           <Route exact path="/headphones" component={Headphones} />

@@ -1,7 +1,12 @@
 import React from "react";
+
+import {connect} from 'react-redux'
+import {addChartItemAction} from '../../redux/chart/chartAction'
+
 import "./product-card.scss";
 
-const ProductCard = ({item}) => {
+
+const ProductCard = ({item, addItem}) => {
 
 const {name, price, imgUrl, description} = item
 
@@ -17,7 +22,7 @@ const {name, price, imgUrl, description} = item
           <p className="price">Price: {price}৳</p>
 
           <div className="add" style={{margin: "1rem auto 0 auto", width: "125px"}}>
-            <button className="main-btn">Add to card</button>
+            <button className="main-btn" onClick={() => addItem(item)}>Add to card</button>
           </div>
         </div>
         <div className="card-reveal">
@@ -32,4 +37,8 @@ const {name, price, imgUrl, description} = item
   );
 };
 
-export default ProductCard;
+const mapDispatchToProps = dispatch => ({
+  addItem: item => dispatch(addChartItemAction(item))
+})
+
+export default connect(null, mapDispatchToProps)(ProductCard);
