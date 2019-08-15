@@ -1,0 +1,10 @@
+.container {
+  position: relative;
+
+  .total {
+    position: absolute;
+    right: 0;
+    top: -4rem;
+    color: indigo;
+  }
+}

@@ -1,11 +1,27 @@
-import React from 'react'
+import React from "react";
+import { connect } from "react-redux";
 
-const Checkout = () => {
+import CheckoutItem from "../../components/CheckoutItem/CheckoutItem";
+import "./checkout.scss";
+
+const Checkout = ({ chartItems }) => {
   return (
-    <div>
+    <div className="container-fluid">
       <h1>Checkout Page</h1>
+      <div className="container">
+        <h5 className="total">Total: 29234$</h5>
+        <ul className="collection">
+          {chartItems.map(item => (
+            <CheckoutItem key={item.id} item={item} />
+          ))}
+        </ul>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Checkout
+const mapStateToProps = ({ chart }) => ({
+  chartItems: chart.items
+});
+
+export default connect(mapStateToProps)(Checkout);

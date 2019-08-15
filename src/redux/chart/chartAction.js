@@ -8,3 +8,8 @@ export const addChartItemAction = item => ({
   type: chartTypes.ADD_ITEM,
   payload: item
 })
+
+export const removeChartItemAction = item => ({
+  type: chartTypes.REMOVE_ITEM,
+  payload: item
+})
