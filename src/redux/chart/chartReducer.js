@@ -26,6 +26,12 @@ const chartReducer = (state = defaultState, action) => {
         items: removeItemFromChart(state.items, action.payload)
       };
 
+    case chartTypes.REMOVE_ALL_ITEM:
+      return {
+        ...state,
+        items: state.items.filter(item => item.id !== action.payload.id)
+      };
+  
     default:
       return state;
   }

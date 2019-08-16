@@ -13,3 +13,8 @@ export const removeChartItemAction = item => ({
   type: chartTypes.REMOVE_ITEM,
   payload: item
 })
+
+export const removeAllChartItemAction = item => ({
+  type: chartTypes.REMOVE_ALL_ITEM,
+  payload: item
+})

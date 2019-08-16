@@ -35,7 +35,7 @@ export const signInWithGithub = () => auth.signInWithPopup(githubProvider);
 export const createUserProfileDoc = async (userAuth, aditonalData) => {
   if (!userAuth) return;
 
-  const userRef = firestore.doc(`users/${userAuth.uid}`); // why not use await here??
+  const userRef = firestore.doc(`users/${userAuth.uid}`);
   const snapshot = await userRef.get();
 
   if (!snapshot.exists) {

@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
 import ShoppingChartItem from "../ShoppingChartItem/ShoppingChartItem";
+import { chartVisibilityAction } from "../../redux/chart/chartAction";
+
 import "./shopping-chart-dropdown.scss";
 
-const ShoppingChartDropdown = ({ items }) => {
+const ShoppingChartDropdown = ({ items, chartAction }) => {
   return (
     <div className="cart-dropdown">
       <div className="cart-items">
@@ -15,7 +17,7 @@ const ShoppingChartDropdown = ({ items }) => {
           <span className="no-item">No Items Added!!</span>
         )}
       </div>
-      <Link to="/checkout" className="main-btn">
+      <Link to="/checkout" className="main-btn" onClick={() => chartAction()}>
         CHECKOUT
       </Link>
     </div>
@@ -26,4 +28,11 @@ const mapStateToProps = ({ chart }) => ({
   items: chart.items
 });
 
-export default connect(mapStateToProps)(ShoppingChartDropdown);
+const mapDispatchToProps = dispatch => ({
+  chartAction: () => dispatch(chartVisibilityAction())
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ShoppingChartDropdown);

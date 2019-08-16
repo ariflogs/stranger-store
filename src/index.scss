@@ -52,7 +52,7 @@ a {
 
 .container-fluid {
   width: 100%;
-  padding: 0 50px; 
+  padding: 0 50px;
 }
 
 // colors
@@ -80,4 +80,11 @@ a {
 .input-field input:focus {
 	border-bottom: 1px solid indigo !important;
 	box-shadow: 0 1px 0 0 indigo !important
+}
+
+
+@media(max-width: 1200px) {
+  .container {
+    // width: 100% !important;
+  }
 }
