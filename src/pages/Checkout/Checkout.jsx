@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 import CheckoutItem from "../../components/CheckoutItem/CheckoutItem";
+import StripeButton from "../../components/StripeButton/StripeButton"
 import "./checkout.scss";
 
 const Checkout = ({ chartItems }) => {
@@ -17,6 +18,8 @@ const Checkout = ({ chartItems }) => {
             <CheckoutItem key={item.id} item={item} />
           ))}
         </ul>
+
+        <StripeButton price={totalPrice} />
       </div>
     </div>
   );
