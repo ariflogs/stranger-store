@@ -2,7 +2,7 @@ An ecommerce app made with React, Redux, Firebase and with help of some other sm
 
 Link: https://stranger-store.herokuapp.com/
 
-you can also download and run it on your localhost. Let me know what you think and suggest what features can be added next.
+you can also download and run it on your localhost.
 
 ### `npm install`
 use this command inside project files to install all the npm packages and dependencies.
